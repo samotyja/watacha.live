@@ -23,27 +23,39 @@
     </div>
     <br>
     <div class="row">
-      <div class="col">
+      <div class="col-12">
         <input id="searchbar" class="form-control" placeholder="Search..." type="text" name="search">
       </div>
     </div>
+
     <br>
-    <div class="row justify-content-md-center">
-      <div class="col col-lg-3">
+
+    <div class="row justify-content-center">
+      <div class="col-3 col-lg-3">
         <select class="form-select" name="searchtype" id="type">
           <option value="ARTIST" selected="selected">Artist</option>
           <option value="TITLE">Song Name</option>
         </select>
       </div>
-      <div class="col col-lg-2">
+
+      <div class="col-2 col-lg-1 d-grid">
+        <button id="btnrandom" type="button" class="btn btn-outline-light">🎲</button>
+      </div>
+
+      <div class="col-2 col-lg-1 d-grid">
+        <button id="btnrefresh" type="button" class="btn btn-outline-light">🔄️</button>
+      </div>
+
+      <div class="col-5 col-lg-2 d-grid">
         <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-          <input type="checkbox" onclick="search_songs()" name="showfile" id="btncheck1" class="btn-check"
-            autocomplete="off">
+          <input type="checkbox" name="showfile" id="btncheck1" class="btn-check" autocomplete="off">
           <label class="btn btn-outline-danger" for="btncheck1">Show file name</label>
         </div>
       </div>
     </div>
+
     <hr class="border border-danger border-3 opacity-75">
+
     <div class="row justify-content-md-center">
       <div class="col col-lg-7">
         <table style="width:100%" class="table table-dark table-striped">
@@ -56,8 +68,8 @@
   <button onclick="goToTop()" id="goToTopBtn" title="Przejdź na górę strony">↑</button>
 </body>
 
-
 <script>
+
   window.onscroll = function () { scrollFunction() };
 
   function scrollFunction() {
@@ -72,6 +84,7 @@
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+
 </script>
 <script src="./script.js" type="module"></script>
 
