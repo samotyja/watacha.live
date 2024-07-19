@@ -7,17 +7,17 @@ document.getElementById("type").addEventListener("change", search_songs);
 document.getElementById("btncheck1").addEventListener("click", search_songs);
 document.getElementById("btnrefresh").addEventListener("click", clearForm);
 document.getElementById("btnrandom").addEventListener("click", selectRandomSong);
-let x = document.querySelector('#list-holder');
+const x = document.querySelector('#list-holder');
 
 function search_songs() {
     let searchinput = document.getElementById('searchbar').value
-    let showfileinput = document.getElementById('btncheck1').checked
-    let type = document.getElementById('type').value
+    const showfileinput = document.getElementById('btncheck1').checked
+    const type = document.getElementById('type').value
     searchinput = searchinput.toLowerCase();
     x.innerHTML = ""
 
     for (let i = 0; i < data.length; i++) {
-        let obj = data[i];
+        const obj = data[i];
 
         if (obj[type].toLowerCase().includes(searchinput)) {
             const row = document.createElement("tr");
