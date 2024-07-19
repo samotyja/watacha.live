@@ -1,6 +1,6 @@
 
 import data from './data-del.json' with { type: 'json' };
-console.log(data);
+// console.log(data);
 
 document.getElementById("searchbar").addEventListener("keyup", search_songs);
 document.getElementById("type").addEventListener("change", search_songs);
